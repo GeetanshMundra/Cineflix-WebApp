@@ -1,8 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ContactUs = () => {
+  const navigate = useNavigate();
   return (
-    <div className="min-h-screen flex flex-col items-center  justify-center p-6 mx-auto">
+    <div className="relative min-h-screen flex flex-col items-center  justify-center p-6 mx-auto">
       <div className="bg-white shadow-lg rounded-lg p-8 w-full ">
         <h1 className="text-3xl font-bold" style={{ color: '#1F1E24' }}>Contact Us</h1>
         <p className="text-gray-700 mb-6">Feel free to reach out to us with any questions or comments. We’d love to hear from you!</p>
@@ -49,6 +51,10 @@ const ContactUs = () => {
           </button>
         </form>
       </div>
+      <i
+        onClick={() => navigate(-1)}
+        class="absolute top-[10%] left-[-25%] hover:text-[#6556CD] text-2xl font-semibold text-zinc-400 ri-arrow-left-line"
+      ></i>
     </div>
   );
 };
