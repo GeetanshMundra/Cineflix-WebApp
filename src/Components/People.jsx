@@ -46,14 +46,14 @@ function People() {
   return people.length > 0 ? (
     <div className="w-screen h-screen">
       <div className="px-[5%] w-full flex items-center justify-between">
-        <h1 className="text-2xl font-semibold text-zinc-400">
+        <h1 className="text-lg font-semibold text-zinc-400">
           <i
             onClick={() => navigate(-1)}
             className="hover:text-[#6556CD] ri-arrow-left-line mr-3"
           ></i>{" "}
           People
         </h1>
-        <div className="flex items-center w-[85%]">
+        <div className="flex items-center w-[75%]">
           <Topnav />
           <div className="w-[2%]"></div>
         </div>

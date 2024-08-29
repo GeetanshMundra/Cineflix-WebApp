@@ -18,19 +18,19 @@ function Topnav() {
     getSearches();
   }, [query]);
   return (
-    <div className="w-[80%] h-[10vh] relative flex items-center mx-auto">
-      <i className="text-zinc-400 text-2xl ri-search-line"></i>
+    <div className="w-[70%] h-[10vh] relative flex items-center ml-3">
+      <i className="text-zinc-400 text-xl ri-search-line"></i>
       <input
         onChange={(e) => setQuery(e.target.value)}
         value={query}
         type="text"
         placeholder="Search Anything..."
-        className="w-[60%] p-5 ml-5 mr-10 text-zinc-200 text-xl border-none outline-none bg-transparent"
+        className="w-[60%] p-5 ml-5 mr-10 text-zinc-200 text-lg border-none outline-none bg-transparent"
       />
       {query.length > 0 && (
         <i
           onClick={() => setQuery("")}
-          className="text-zinc-400 text-3xl ri-close-line"
+          className="text-zinc-400 text-xl ri-close-line"
         ></i>
       )}
       <div className="z-[100] absolute w-[65%] max-h-[50vh] bg-zinc-200 top-[100%] left-[5%] overflow-auto rounded">

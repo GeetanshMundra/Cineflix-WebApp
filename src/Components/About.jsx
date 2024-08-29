@@ -6,15 +6,15 @@ function About() {
   return (
     <div className="relative w-full min-h-screen bg-[#1F1E24] text-white flex flex-col items-center px-4 pt-4 overflow-hidden overflow-y-auto">
       {/* Header Section */}
-      <h1 className="text-6xl mb-8 font-bold text-center text-[#6556CD]">
+      <h1 className="text-4xl mb-6 font-bold text-center text-[#6556CD]">
         About Cineflix
       </h1>
 
-      <div className="max-w-4xl w-full">
+      <div className="max-w-2xl w-full">
         {/* Introduction Section */}
-        <div className="bg-[#2a292f] p-6 md:p-8 rounded-lg shadow-lg mb-8">
-          <h2 className="text-4xl font-semibold mb-4">Introduction</h2>
-          <p className="text-xl text-gray-300">
+        <div className="bg-[#2a292f] p-4 md:p-6 rounded-lg shadow-lg mb-6">
+          <h2 className="text-2xl font-semibold mb-2">Introduction</h2>
+          <p className="text-md text-gray-300">
             Welcome to Cineflix, your ultimate destination for exploring the
             world of movies and TV shows. Whether you're a casual viewer or a
             film enthusiast, Cineflix provides you with trailers, detailed
@@ -30,9 +30,9 @@ function About() {
         </div>
 
         {/* Our Mission Section */}
-        <div className="bg-[#2a292f] p-6 md:p-8 rounded-lg shadow-lg mb-8">
-          <h2 className="text-4xl font-semibold mb-4">Our Mission</h2>
-          <p className="text-xl text-gray-300">
+        <div className="bg-[#2a292f] p-4 md:p-6 rounded-lg shadow-lg mb-6">
+          <h2 className="text-2xl font-semibold mb-2">Our Mission</h2>
+          <p className="text-md text-gray-300">
             At Cineflix, our mission is to bridge the gap between viewers and
             the vast world of cinema and television. We strive to create a
             comprehensive platform where you can not only watch the latest
@@ -45,12 +45,12 @@ function About() {
       </div>
 
       {/* Footer */}
-      <footer className="mt-5 text-center text-gray-500">
+      <footer className="text-sm text-center text-gray-500">
         &copy; {new Date().getFullYear()} Cineflix. All rights reserved.
       </footer>
       <i
         onClick={() => navigate(-1)}
-        class="absolute top-[5%] left-[10%] hover:text-[#6556CD] text-2xl font-semibold text-zinc-400 ri-arrow-left-line"
+        class="absolute top-[5%] left-[10%] hover:text-[#6556CD] text-xl font-semibold text-zinc-400 ri-arrow-left-line"
       ></i>
     </div>
   );

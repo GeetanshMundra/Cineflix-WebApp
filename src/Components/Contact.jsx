@@ -53,7 +53,7 @@ const ContactUs = () => {
       </div>
       <i
         onClick={() => navigate(-1)}
-        class="absolute top-[10%] left-[-25%] hover:text-[#6556CD] text-2xl font-semibold text-zinc-400 ri-arrow-left-line"
+        class="absolute top-[5%] left-[-25%] hover:text-[#6556CD] text-xl font-semibold text-zinc-400 ri-arrow-left-line"
       ></i>
     </div>
   );

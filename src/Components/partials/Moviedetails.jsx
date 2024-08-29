@@ -34,10 +34,10 @@ function Moviedetails() {
       }}
       className="realtive w-full overflow-hidden overflow-y-auto px-[8%]"
     >
-      <nav className="w-full h-[10vh] flex items-center gap-10 text-xl text-zinc-100">
+      <nav className="w-full h-[10vh] flex items-center gap-8 text-md text-zinc-100">
         <Link
           onClick={() => navigate(-1)}
-          className="hover:text-[#6556CD] ri-arrow-left-line mr-3"
+          className="hover:text-[#6556CD] ri-arrow-left-line mr-5"
         ></Link>{" "}
         <a target="_blank" href={info.detail.homepage}>
           <i class="ri-external-link-fill"></i>
@@ -64,60 +64,60 @@ function Moviedetails() {
           alt=""
         />
         <div className="ml-10 content">
-          <h1 className="font-black text-6xl text-white">
+          <h1 className="font-black text-5xl text-white">
             {info.detail.name ||
               info.detail.title ||
               info.detail.original_name ||
               info.detail.original_title}
             {info.detail.release_date && (
-              <span className="ml-3 text-2xl text-zinc-200 font-bold">
+              <span className="ml-2 text-xl text-zinc-200 font-bold">
                 ({info.detail.release_date.split("-")[0]})
               </span>
             )}
           </h1>
-          <div className="mt-3 mb-5 flex items-center gap-x-3 text-white">
-            <span className="rounded-full text-xl font-semibold bg-yellow-600 text-white w-[7vh] h-[7vh] flex justify-center items-center">
+          <div className="mt-2 mb-4 flex items-center gap-x-3 text-white">
+            <span className="rounded-full text-md font-semibold bg-yellow-600 text-white w-[7vh] h-[7vh] flex justify-center items-center">
               {(info.detail.vote_average * 10).toFixed()}
               <sup>%</sup>
             </span>
-            <h1 className="w-[60px] font-semibold text-2xl leading-6">
+            <h1 className="w-[60px] font-semibold text-xl leading-5">
               User Score
             </h1>
             {info.detail.release_date && (
-              <h1 className="text-lg text-white font-semibold">
+              <h1 className="text-md text-white font-semibold">
                 {info.detail.release_date}
               </h1>
             )}
-            <h1 className="text-lg text-white font-semibold">
+            <h1 className="text-md text-white font-semibold">
               {info.detail.genres.map((g) => g.name).join(", ")}
             </h1>
-            <h1 className="text-lg text-white font-semibold">
+            <h1 className="text-md text-white font-semibold">
               {info.detail.runtime}min
             </h1>
           </div>
-          <h1 className="text-xl font-semibold italic text-zinc-200">
+          <h1 className="text-lg font-semibold italic text-zinc-200">
             {info.detail.tagline}
           </h1>
-          <h1 className="mt-5 mb-1 text-2xl text-white text-semibold">
+          <h1 className="mt-3 mb-1 text-xl text-white text-semibold">
             Overview
           </h1>
-          <p className="text-white text-xl mb-10">{info.detail.overview}</p>
+          <p className="text-white text-md mb-8">{info.detail.overview}</p>
           {/* <h1 className="mt-5 mb-1 text-2xl text-white">Translations</h1>
           <p className="mb-10 text-white text-md">
             {info.translations.join(", ")}
           </p> */}
           <Link
-            className="p-5 text-white text-lg rounded-lg bg-[#6556CD]"
+            className="p-3 text-white text-sm rounded-lg bg-[#6556CD]"
             to={`${pathname}/trailer`}
           >
             <i class="mr-3 ri-play-large-fill"></i>Play Trailer
           </Link>
         </div>
       </div>
-      <div className="w-[80%] flex flex-col gap-y-5 mt-10">
+      <div className="w-[80%] flex flex-col gap-y-4 mt-6">
         {info.watchProvider && info.watchProvider.flatrate && (
-          <div className="flex gap-x-10 items-center text-white">
-            <h1 className="text-md text-zinc-200 font-semibold">
+          <div className="flex gap-x-5 items-center text-white">
+            <h1 className="text-sm text-zinc-200 font-semibold">
               Available on Platform
             </h1>
             {info.watchProvider.flatrate.map((d, i) => (
@@ -132,8 +132,8 @@ function Moviedetails() {
           </div>
         )}
         {info.watchProvider && info.watchProvider.rent && (
-          <div className="flex gap-x-10 items-center text-white">
-            <h1 className="text-md text-zinc-200 font-semibold">
+          <div className="flex gap-x-5 items-center text-white">
+            <h1 className="text-sm text-zinc-200 font-semibold">
               Available on Rent
             </h1>
             {info.watchProvider.rent.map((d, i) => (
@@ -148,8 +148,8 @@ function Moviedetails() {
           </div>
         )}
         {info.watchProvider && info.watchProvider.buy && (
-          <div className="flex gap-x-10 items-center text-white">
-            <h1 className="text-md text-zinc-200 font-semibold">
+          <div className="flex gap-x-5 items-center text-white">
+            <h1 className="text-sm text-zinc-200 font-semibold">
               Available to Buy
             </h1>
             {info.watchProvider.buy.map((d, i) => (
@@ -164,8 +164,8 @@ function Moviedetails() {
           </div>
         )}
       </div>
-      <hr className="mt-10 mb-5 h-[2px] border-none bg-zinc-500" />
-      <h1 className="text-3xl text-white font-bold">
+      <hr className="mt-8 mb-4 h-[2px] border-none bg-zinc-500" />
+      <h1 className="text-2xl text-white font-bold">
         Recommendations & Similar Stuff
       </h1>
       <Horizontalcards

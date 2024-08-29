@@ -41,8 +41,8 @@ function Home() {
       <div className="w-[80%] h-full overflow-auto overflow-x-hidden">
         <Topnav />
         <Header data={wallpaper} />
-        <div className="flex justify-between px-5 pt-5">
-          <h1 className="text-3xl font-semibold text-zinc-400">Trending</h1>
+        <div className="flex justify-between px-3 pt-3">
+          <h1 className="text-xl font-semibold text-zinc-400">Trending</h1>
           <Dropdown
             title="Filter"
             options={["tv", "movie", "all"]}

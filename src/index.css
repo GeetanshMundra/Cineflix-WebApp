@@ -33,7 +33,7 @@ select {
     padding: 0 0.5em;
     color: #fff;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 0.8em;
     font-family: "Open Sans", sans-serif;
 }
 select::-ms-expand {
@@ -42,9 +42,9 @@ select::-ms-expand {
 .select {
     position: relative;
     display: flex;
-    width: 20em;
-    height: 3em;
-    line-height: 3;
+    width: 15em;
+    height: 2em;
+    line-height: 2;
     background: #27272a;
     overflow: hidden;
     border-radius: 0.25em;
